@@ -1,0 +1,29 @@
+return {
+  "nvim-treesitter/nvim-treesitter",
+  build = ":TSUpdate",
+  event = { "BufReadPost", "BufNewFile" },
+  cmd = { "TSUpdateSync", "TSInstall", "TSBufEnable", "TSBufDisable" },
+  opts = {
+    highlight = { enable = true },
+    indent = { enable = false },
+    ensure_installed = {
+      "bash",
+      "css",
+      "graphql",
+      "html",
+      "javascript",
+      "json",
+      "lua",
+      "php",
+      "typescript",
+      "tsx",
+      "yaml",
+      "blade",
+    },
+    sync_install = false,
+    auto_install = false,
+  },
+  config = function(_, opts)
+    require("nvim-treesitter.configs").setup(opts)
+  end,
+}
