@@ -29,3 +29,17 @@ vim.cmd('source ~/.vimrc')
 
 -- options.lua
 vim.opt.completeopt = {'menuone', 'noselect', 'menu'}
+
+-- Disable problematic indent settings
+vim.bo.smartindent = false
+vim.bo.indentexpr = ''
+
+-- Use basic autoindent
+vim.bo.autoindent = true
+vim.bo.cindent = true
+
+-- Set proper tab settings
+vim.bo.tabstop = 4
+vim.bo.shiftwidth = 4
+vim.bo.expandtab = true
+
