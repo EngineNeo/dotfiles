@@ -1,1 +1,6 @@
 theme = "Monokai Pro Light Sun"
+
+mouse-hide-while-typing = true
+clipboard-read = allow
+clipboard-write = allow
+macos-titlebar-style = hidden

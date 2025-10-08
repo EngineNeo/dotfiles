@@ -6,7 +6,12 @@ export PATH="/opt/homebrew/opt/mysql@8.4/bin:$PATH"
 export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
 
 PS1="%F{green}%D{%H:%M:%S} %F{green}%~ %F{green}→ %f"
+PS2="%n $2~ %#"
 
 autoload -Uz add-zsh-hook
-add-zsh-hook chpwd () { tmux rename-window "$(basename $PWD)"; }
+add-zsh-hook chpwd () { 
+  if [[ -n "$TMUX" ]]; then
+    tmux rename-window "$(basename $PWD)"
+  fi
+}
 
