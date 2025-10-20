@@ -32,6 +32,9 @@ return {
 					},
 				},
 				lualine_b = {
+					"branch",
+				},
+				lualine_c = {
 					{
 						"filetype",
 						separator = { left = "", right = "" },
@@ -39,7 +42,7 @@ return {
 						padding = { left = 1 },
 					},
 				},
-				lualine_c = {
+				lualine_d = {
 					{
 						"filename",
 						separator = { left = "", right = "" },
