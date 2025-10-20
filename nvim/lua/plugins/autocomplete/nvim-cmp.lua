@@ -4,14 +4,21 @@ return {
     -- snippet engine
     "L3MON4D3/LuaSnip",
 
+    -- snippet collection
+    "rafamadriz/friendly-snippets",
+
     -- completion sources
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-path",
     "hrsh7th/cmp-cmdline",
     "hrsh7th/cmp-nvim-lua",
+    "hrsh7th/cmp-calc",
+    "hrsh7th/cmp-omni",
+    "tamago324/cmp-zsh",
+    "andersevenrud/cmp-tmux",
+    "hrsh7th/cmp-nvim-lsp-signature-help",
     "saadparwaiz1/cmp_luasnip",
-    "windwp/nvim-autopairs",
   },
   config = function()
     local cmp = require("cmp");
@@ -46,9 +53,6 @@ return {
           ellipsis_char = '…',
         }),
       },
-      performance = {
-	      max_view_entries = 10,
-      },
       completion = {
         completeopt = "menu,menuone,preview",
       },
@@ -61,7 +65,7 @@ return {
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
-      });
+      }),
       sources = cmp.config.sources({
         { name = "luasnip" },
         { name = "nvim_lsp" },

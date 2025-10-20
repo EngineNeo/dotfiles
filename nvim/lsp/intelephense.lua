@@ -25,7 +25,7 @@ return {
       -- Define globals to silence “undefined variable” warnings
       -- e.g. common Laravel / WordPress functions
       stubs = {
-        "Wordpress", "Laravel", "symfony", "blade", "GraphQL"
+        "Wordpress", "Laravel", "symfony", "blade", "GraphQL", "Core", "standard", "SPL"
       },
     },
   },

@@ -3,7 +3,7 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		local lint = require("lint")
-		
+
 		-- Configure linters by filetype
 		lint.linters_by_ft = {
 			javascript = { "biomejs" },
