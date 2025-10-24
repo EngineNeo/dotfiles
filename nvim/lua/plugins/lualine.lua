@@ -33,16 +33,10 @@ return {
 				},
 				lualine_b = {
 					"branch",
+					"diff",
+					"diagnostics",
 				},
 				lualine_c = {
-					{
-						"filetype",
-						separator = { left = "", right = "" },
-						icon_only = true,
-						padding = { left = 1 },
-					},
-				},
-				lualine_d = {
 					{
 						"filename",
 						separator = { left = "", right = "" },
@@ -52,7 +46,9 @@ return {
 				},
 				lualine_x = {
 					{
-						"diagnostics",
+						"encoding",
+						"fileformat",
+						"filetype",
 						separator = { left = "", right = "" },
 						padding = { left = 0, right = 0 },
 					},

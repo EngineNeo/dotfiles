@@ -7,8 +7,10 @@ vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 
 vim.opt.clipboard = "unnamedplus"
 
--- Conform (Formating)
-vim.keymap.set("n", "<leader>lf", function() require("conform").format() end)
+-- Conform (Formatting)
+vim.keymap.set("n", "<leader>lf", function()
+	require("conform").format()
+end)
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("UserLspConfig", {}),
@@ -30,3 +32,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end, opts)
 	end,
 })
+
+-- Markdown Preview
+vim.keymap.set("n", "<leader>mp", function()
+	vim.cmd("MarkdownPreview")
+end, { desc = "Start Markdown Preview" })
